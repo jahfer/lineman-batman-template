@@ -1,0 +1,15 @@
+<h1>Orders</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Payment Status</th>
+        <th>Fulfillment Status</th>
+        <th>Total</th>
+    </tr>
+    <tr data-foreach-order="orders">
+        <td data-bind="order.name"></td>
+        <td data-bind="order.financial_status"></td>
+        <td data-bind="order.fulfillment_status"></td>
+        <td data-bind="order.total_price | prepend '$'"></td>
+    </tr>
+</table>

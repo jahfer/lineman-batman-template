@@ -1,3 +1,3 @@
-describe "controller: ApplicationController", ->
-  Given -> @subject = BatmanApp.ApplicationController
-  Then  -> @subject != undefined
+# describe "controller: ApplicationController", ->
+#   Given -> @subject = BatmanApp.ApplicationController
+#   Then  -> @subject != undefined

@@ -1,9 +1,9 @@
-describe "controller: ExamplesController", ->
+# describe "controller: ExamplesController", ->
 
-  Given -> @subject = new BatmanApp.ExamplesController
+#   Given -> @subject = new BatmanApp.ExamplesController
 
-  describe "routingKey", ->
-    Then -> @subject.routingKey is 'examples'
+#   describe "routingKey", ->
+#     Then -> @subject.routingKey is 'examples'
 
-  describe "#index", ->
-    Then -> @subject.index instanceof Function
+#   describe "#index", ->
+#     Then -> @subject.index instanceof Function

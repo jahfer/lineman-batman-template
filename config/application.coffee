@@ -30,7 +30,7 @@ module.exports = require(process.env["LINEMAN_MAIN"]).config.extend("application
   # generates a batman template precache into Batman.View.store
   batman_templates:
     options:
-      templateFolder: "app/views"
+      templateFolder: "app/html"
     files:
       src: "<%= files.batman_views %>"
       dest: "<%= files.batman_viewstore %>"

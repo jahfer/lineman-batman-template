@@ -11,23 +11,17 @@
  *   defining a spec based on the needs of the client code that emerge.
  *
  */
+var fs = require('fs');
 
 module.exports = {
   drawRoutes: function(app) {
-    app.post('/login', function(req, res) {
-      res.json({ message: 'logging in!' });
-    });
-
-    app.post('/logout', function(req, res) {
-      res.json({ message: 'logging out!'});
-    });
-
-    app.get('/books', function (req, res) {
-      res.json([
-        {title: 'Great Expectations', author: 'Dickens'},
-        {title: 'Foundation Series', author: 'Asimov'},
-        {title: 'Treasure Island', author: 'Stephenson'}
-      ]);
+    app.get('/api/:resource.json', function (req, res) {
+      fs.readFile(__dirname + '/api/' + req.params.resource + '.json', 'utf8', function (err, data) {
+        if (err) {
+          return res.send(500, err);
+        }
+        res.json(200, JSON.parse(data));
+      })
     });
   }
 };
